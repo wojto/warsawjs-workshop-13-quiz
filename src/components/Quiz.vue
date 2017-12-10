@@ -1,8 +1,7 @@
 <template>
-    <div class="container">
+    <div class="quiz container">
         <div class="row">
             <div class="col-md-6">
-                QUIZ
                 <question :question="actualQuestion"/>
                 <hubert/>
             </div>
@@ -37,9 +36,28 @@
                         id: 4,
                         content: "GM",
                         correct: true
-                    }
-
-                    ]
+                    }]
+                },
+                {
+                    id: 2,
+                    title: "worst car?",
+                    answers: [{
+                        id: 1,
+                        content: "audi",
+                        correct: false
+                    }, {
+                        id: 2,
+                        content: "bmw",
+                        correct: true
+                    }, {
+                        id: 3,
+                        content: "vw",
+                        correct: false
+                    }, {
+                        id: 4,
+                        content: "toyota",
+                        correct: false
+                    }]
                 }]
             };
         },
@@ -56,4 +74,7 @@
 </script>
 
 <style scoped>
+    .quiz {
+        margin-top: 20px;
+    }
 </style>

@@ -22,7 +22,7 @@
         },
         methods: {
             selectAnswer(payload) {
-                console.log(payload);
+                this.$store.dispatch('updateCurrentAnswer', { questionId: this.question.id, answerId: payload.id});
             }
         }
     };
