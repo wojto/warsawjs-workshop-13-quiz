@@ -32,7 +32,7 @@ const store = new Vuex.Store({
             state.currentQuestion.correct = correct;
             state.answersHistory.push(state.currentQuestion);
         },
-        nextQuestion(state, questionData) {
+        nextQuestion(state) {
             if (state.questionIndex < state.maxQuestion) {
                 state.questionPhase = 0;
                 state.currentQuestion = {};

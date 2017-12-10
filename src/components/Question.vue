@@ -17,12 +17,11 @@
         props: ['question'],
         data() {
             return {
-                // msg: 'Welcome to Your Vue.js App',
             };
         },
         methods: {
-            selectAnswer(payload) {
-                this.$store.dispatch('updateCurrentAnswer', { questionId: this.question.id, answerId: payload.id});
+            selectAnswer(answerData) {
+                this.$store.dispatch('updateCurrentAnswer', { questionId: this.question.id, answerId: answerData.id});
             }
         }
     };

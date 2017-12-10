@@ -1,5 +1,5 @@
 <template>
-    <div @click="highlight" :class="corrected">
+    <div @click="highlight" :class="'answer ' + corrected">
         {{ answer.content }}
     </div>
 </template>
@@ -10,7 +10,6 @@
         props: ['answer'],
         data() {
             return {
-                // msg: 'Welcome to Your Vue.js App',
             };
         },
         computed: {
@@ -38,7 +37,7 @@
 </script>
 
 <style scoped>
-    div {
+    .answer {
         border: 1px solid #c6c6c6;
         margin: 10px;
         padding: 10px;
