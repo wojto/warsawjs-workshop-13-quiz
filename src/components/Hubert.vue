@@ -35,12 +35,10 @@
         },
         methods: {
             accept(question) {
-                this.$store.dispatch('answerQuestion', {
-                    correct: check(this.question.questionId, this.question.answerId)
-                });
+                this.$store.dispatch('answerQuestion', check(this.question.questionId, this.question.answerId));
             },
             moveNext() {
-                if (this.$store.currentQuestion.correct) {
+                if (this.$store.state.currentQuestion.correct) {
                     this.$store.dispatch('nextQuestion');
                 } else {
                     this.$router.push('finish');

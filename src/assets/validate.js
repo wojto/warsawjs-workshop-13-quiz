@@ -22,6 +22,27 @@ let data = [{
     }
 
     ]
+},
+{
+    id: 2,
+    title: "worst car?",
+    answers: [{
+        id: 1,
+        content: "audi",
+        correct: false
+    }, {
+        id: 2,
+        content: "bmw",
+        correct: true
+    }, {
+        id: 3,
+        content: "vw",
+        correct: false
+    }, {
+        id: 4,
+        content: "toyota",
+        correct: false
+    }]
 }];
 
 function check(qid, aid) {

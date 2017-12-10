@@ -38,7 +38,7 @@ const store = new Vuex.Store({
                 state.currentQuestion = {};
                 state.questionIndex++;
             } else {
-                this.$router.push('/finish');
+                main.$router.push('/finish');
             }
         }
     },
@@ -59,7 +59,7 @@ const store = new Vuex.Store({
 });
 
 /* eslint-disable no-new */
-new Vue({
+const main = new Vue({
     el: '#app',
     router,
     store,
