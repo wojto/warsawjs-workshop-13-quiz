@@ -6,11 +6,14 @@ import App from './App';
 import router from './router/index';
 
 Vue.config.productionTip = false;
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 const store = new Vuex.Store({
     state: {
-        userName: ''
+        userName: '',
+        questionIndex: 0,
+        questionPhase: 0,// 0 - waiting, 1 - highlighted, 2 - answered
+        answersHistory: []
     },
     mutations: {
         setName(state, payload) {
@@ -22,7 +25,7 @@ const store = new Vuex.Store({
             commit('setName', payload)
         }
     }
-})
+});
 
 /* eslint-disable no-new */
 new Vue({
